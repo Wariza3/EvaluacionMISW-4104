@@ -2,14 +2,9 @@
 
 WilliamAriza Entrega de Evaluación MISW-4104
 
-## Proyecto base
+## Punto 1: listado de cafés
 
-Aplicación inicial creada con Angular CLI. Esta base deja preparada la estructura para desarrollar posteriormente los puntos 1, 2 y 3 de la evaluación.
-
-## Requisitos
-
-- Node.js compatible con Angular CLI 22
-- npm
+La aplicación obtiene las variedades desde el servicio HTTP y muestra nombre, tipo y región en una tabla Bootstrap. El módulo y el componente de cafés están en `src/app/cafes`; la clase `Cafe` contiene los campos del JSON de la evaluación.
 
 ## Instalación y ejecución
 
@@ -18,7 +13,7 @@ npm install
 npm start
 ```
 
-Abre `http://localhost:4200/` en el navegador. La aplicación se recarga automáticamente al guardar cambios.
+Abre `http://localhost:4200/` en el navegador.
 
 ## Pruebas y compilación
 
@@ -26,5 +21,3 @@ Abre `http://localhost:4200/` en el navegador. La aplicación se recarga automá
 npm test
 npm run build
 ```
-
-El proyecto usa componentes standalone y Angular Router. Las rutas se configuran en `src/app/app.routes.ts`.
