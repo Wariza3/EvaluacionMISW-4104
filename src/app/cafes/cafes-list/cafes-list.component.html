@@ -14,10 +14,10 @@
   <section class="coffee-list" aria-labelledby="coffee-list-title">
     <h2 id="coffee-list-title" class="visually-hidden">Variedades de café</h2>
 
-    @if (isLoading) {
+    @if (isLoading()) {
       <p class="status-message" role="status">Cargando cafés...</p>
-    } @else if (errorMessage) {
-      <p class="alert alert-danger" role="alert">{{ errorMessage }}</p>
+    } @else if (errorMessage()) {
+      <p class="alert alert-danger" role="alert">{{ errorMessage() }}</p>
     } @else {
       <div class="table-responsive">
         <table class="table table-striped table-hover coffee-table">
@@ -30,7 +30,7 @@
             </tr>
           </thead>
           <tbody>
-            @for (cafe of cafes; track cafe.id; let row = $index) {
+            @for (cafe of cafes(); track cafe.id; let row = $index) {
               <tr>
                 <th scope="row">{{ row + 1 }}</th>
                 <td>{{ cafe.nombre }}</td>
@@ -40,6 +40,10 @@
             }
           </tbody>
         </table>
+      </div>
+      <div class="coffee-totals">
+        <p>Total café de origen: {{ cantidadCafeOrigen() }}</p>
+        <p>Total café blend: {{ cantidadCafeBlend() }}</p>
       </div>
     }
   </section>

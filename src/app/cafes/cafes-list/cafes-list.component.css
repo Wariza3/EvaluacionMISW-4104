@@ -78,6 +78,15 @@
   width: 3.5rem;
 }
 
+.coffee-totals {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.coffee-totals p {
+  margin-bottom: 0.15rem;
+}
+
 .status-message {
   margin: 1rem 0;
   color: #5c5c5c;
